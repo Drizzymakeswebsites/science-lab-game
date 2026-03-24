@@ -1,93 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Selection</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, rgba(255, 0, 255, 0.5), rgba(0, 255, 255, 0.5));
-            backdrop-filter: blur(10px);
-            font-family: 'Poppins', sans-serif;
-        }
-        .container {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-        input[type='text'] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background: #007BFF;
-            color: white;
-        }
-        button:hover {
-            background: #0056b3;
-        }
-    </style>
+    <title>Game Index</title>
 </head>
 <body>
-    <div class="container" id="signup-container">
-        <h1>Sign Up</h1>
-        <input type="text" id="username" placeholder="Enter your username (3-20 characters)" />
-        <button id="signup">Sign Up</button>
-        <div id="error-message" style="color: red;"></div>
-    </div>
-    <div class="container" id="game-selection" style="display: none;">
-        <h1>Select a Game</h1>
-        <button id="cps-clicker">CPS Clicker</button>
-        <button id="reaction-test">Reaction Test</button>
-        <button id="logout">Logout</button>
-    </div>
-    <script>
-        const signupButton = document.getElementById('signup');
-        const usernameInput = document.getElementById('username');
-        const signupContainer = document.getElementById('signup-container');
-        const gameSelectionContainer = document.getElementById('game-selection');
-        const errorMessage = document.getElementById('error-message');
-
-        signupButton.addEventListener('click', function() {
-            const username = usernameInput.value;
-            const regex = /^[a-zA-Z0-9-_]{3,20}$/;
-            if (regex.test(username)) {
-                localStorage.setItem('username', username);
-                signupContainer.style.display = 'none';
-                gameSelectionContainer.style.display = 'block';
-            } else {
-                errorMessage.textContent = 'Username must be 3-20 characters long and can include letters, numbers, - and _.';
-            }
-        });
-
-        document.getElementById('logout').addEventListener('click', function() {
-            localStorage.removeItem('username');
-            signupContainer.style.display = 'block';
-            gameSelectionContainer.style.display = 'none';
-        });
-
-        window.onload = function() {
-            const username = localStorage.getItem('username');
-            if (username) {
-                signupContainer.style.display = 'none';
-                gameSelectionContainer.style.display = 'block';
-            }
-        };
-    </script>
+    <h1>Welcome to the Game Index</h1>
+    <ul>
+        <li><a href="https://example.com/cps-clicker">CPS Clicker</a></li>
+        <li><a href="https://example.com/reaction-test">Reaction Test</a></li>
+        <li><a href="https://example.com/shell-shockers">Shell Shockers</a></li>
+        <li><a href="https://example.com/lol-beans">Lol Beans</a></li>
+        <li><a href="https://example.com/spotify">Spotify</a></li>
+        <li><a href="https://example.com/veck-io">Veck.io</a></li>
+        <li><a href="https://example.com/roblox">Roblox</a></li>
+        <li><a href="https://example.com/discord">Discord</a></li>
+    </ul>
 </body>
 </html>
