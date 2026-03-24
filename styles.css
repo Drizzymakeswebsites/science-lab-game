@@ -1,0 +1,47 @@
+/* styles.css */
+
+/* Glassmorphism style */
+body {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    border-radius: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Neon gradient */
+h1 {
+    background: linear-gradient(90deg, #ff00cc, #3333ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    from { text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc, 0 0 30px #3333ff, 0 0 40px #3333ff; }
+    to { text-shadow: 0 0 20px #ff00cc, 0 0 30px #ff00cc, 0 0 40px #3333ff, 0 0 50px #3333ff; }
+}
+
+/* Smooth animations */
+.button {
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+.button:hover {
+    background-color: #ff00cc;
+    transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+}
