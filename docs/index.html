@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Science Lab Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, rgba(255, 0, 127, 0.8), rgba(0, 204, 255, 0.8));
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 3rem;
+            text-shadow: 0 0 20px rgba(255, 0, 127, 0.8);
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        .section:hover {
+            transform: scale(1.05);
+        }
+        a {
+            color: cyan;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: magenta;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Science Lab Game!</h1>
-    <h2>Games</h2>
-    <ul>
-        <li><a href="cps-game.html">Clickable CPS Game</a></li>
-        <li><a href="reaction-test.html">Reaction Test Game</a></li>
-    </ul>
+    <div class="section">
+        <h1>Welcome to the Science Lab Game!</h1>
+        <p>Explore the mysteries of science through our interactive game.</p>
+        <a href="#">Play Now</a>
+    </div>
 </body>
 </html>
